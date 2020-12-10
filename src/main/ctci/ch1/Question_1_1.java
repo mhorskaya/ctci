@@ -6,10 +6,9 @@ public class Question_1_1 {
     public static boolean isUnique(String str) {
         HashSet<Character> set = new HashSet<>();
         for (char c : str.toCharArray()) {
-            if (set.contains(c)) {
+            if (!set.add(c)) {
                 return false;
             }
-            set.add(c);
         }
         return true;
     }
